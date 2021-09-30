@@ -1,10 +1,21 @@
 package Second;
 
 public class MethodTest {
-	public static void main(String[] args) {
-		String str =  "자바는 잡아서 자바";
+
+	public static int count_Keyword(String input, String data) {
+		int count = 0;
+		int start = 0;
 		
-		System.out.println(str.indexOf("자바",2));
-		
+		while(true) {
+			if(data.indexOf(input) < 0) break;
+			start += input.length();
+			count++;
+		}
+		return count;
 	}
+	
+	public static int get_Index(String input, String data) {
+		return data.indexOf(input);
+	}
+	
 }
